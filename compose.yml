@@ -16,6 +16,9 @@ services:
 
   kaneo:
     image: ghcr.io/usekaneo/kaneo:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.kaneo
     ports:
       - "5173:5173"
     env_file:
